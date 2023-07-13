@@ -1,0 +1,25 @@
+# Virtual Environment File
+.venv
+
+# Data Files
+*.csv
+*.xls
+*.xlsx
+*.zip
+*.png
+*.jpg
+
+# Information and Articles
+*.htm
+
+# Notebook Checkpoints
+.ipynb_checkpoints
+
+# Jupyter Notebook cache
+__pycache__
+
+# Settings files from VSCode
+.vscode
+
+# Environment Variable file
+*.env
