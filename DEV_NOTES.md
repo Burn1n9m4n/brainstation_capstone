@@ -20,3 +20,30 @@
     * Check Spotify dataset on Kaggle to check what information is already out there
         * Data set of 10,000 most popular songs on Spotify, for example
         * datasetsearch on Google
+
+## Meeting with Paul 7/21/2023
+* Possible questions to ask?
+    * Does cover art predict tempo?
+    * Using song intros as a means of recommending other songs?
+        * "Give me a track that sounds like this without it being the same song."
+        * Take data
+        * Find embeddings within the audio and see how they match to dataset
+        * Embedding meaning that you break down the audio into a n-dimensional vector (50 for example)
+            * Could use auto encoding
+        * Then try to map the encoding of a song to another song
+        * Could then use cosine similarity and then match to closest approximation
+        * We could pass in the audio data using either a link to the audio data or via someone playing the sound via a phone
+        * Transfer learning - could check what CNNs exist for audio
+        * Auto Encoder for a data - it would take a while
+        * Could look for pre-trained transformer 
+            * Hugging face libraries - they might have something for music recognition or genre recognition
+                * Maps audio to image
+        * I could consult the dataset I have to check what was recommended vs what was passed in.
+        * Because of the use of vectors you can add and subtract
+        * LAME or FFMPEG for python
+            * Encoder
+            * curl | mmpeg...etc
+* **Action Items**: Try to get about 100 of the audio clips from Spotify API
+    * This would involve getting the links to the audio
+    * https://huggingface.co/learn/audio-course/chapter0/introduction
+    * Try to go through that course and pull music for first sprint
