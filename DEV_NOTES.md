@@ -47,3 +47,28 @@
     * This would involve getting the links to the audio
     * https://huggingface.co/learn/audio-course/chapter0/introduction
     * Try to go through that course and pull music for first sprint
+
+## Sprint 1 Submission Details 7/24/2023
+* README.md should have a description of the project at this stage including the following:
+    * Info on the data set (rows, column explanations)
+    * This could be relevant to my project: https://github.com/hjoneal/spotify-moodgrid-playlister/blob/main/README.md
+* Jupyter Notebook
+    * Make sure the notebook is reproducible
+        * Include link to data if it is very big
+    * Don't include digressions
+    * Data to build preliminary model 
+        * Even if it's just a preliminary model that's kind of lousy
+
+## Meeting with Paul 7/24/2023
+* Instructions to get audio:
+    * python -m pip install spotify_dl
+    * put in secrets and token
+    * spotify_dl -l your_track_id
+    * conda install -c conda-forge ffmpeg (installs ffmpeg)
+    * Needed to use `export` to put in `SPOTIPY_CLIENT_ID` and `SPOTIPY_CLIENT_SECRET`
+    * command line code to get track:
+        * spotify_dl -l "https://open.spotify.com/track/28Ct4qwkQXY2W5yyNCLuVI" -o .
+        * The hash here is a track ID. 
+    * place master dir
+    * come up with code to extract from directory and rename using trackid
+
