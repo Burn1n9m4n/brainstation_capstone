@@ -71,4 +71,5 @@
         * The hash here is a track ID. 
     * place master dir
     * come up with code to extract from directory and rename using trackid
+    * pull audio for list of unique track IDs from Kaggle data
 
