@@ -9,7 +9,7 @@
 *.png
 *.jpg
 *.mp3
-**/mp3/*
+**/mp3s/*
 
 # Information and Articles
 *.htm
