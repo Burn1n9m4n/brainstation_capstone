@@ -8,6 +8,8 @@
 *.zip
 *.png
 *.jpg
+*.mp3
+**/mp3/*
 
 # Information and Articles
 *.htm
