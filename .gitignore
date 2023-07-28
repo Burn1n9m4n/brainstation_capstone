@@ -28,3 +28,6 @@ __pycache__
 
 # Cached Tokens
 *.cache
+
+# .DS_Store (mac system file)
+*.DS_Store 
