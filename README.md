@@ -4,7 +4,8 @@
 This is a git repo for my BrainStation course capstone entitled Synesthete.
 
 ### Project Overview
-**synesthete** ***(sĭn′ĭs-thēt″)*** noun
+**synesthete** ***(sĭn′ĭs-thēt″)*** - noun
+
 A person who experiences synesthesia, a perceptual phenomenon in which stimulation of one sensory or cognitive pathway
 leads to involuntary experiences in a second sensory or cognitive pathway.
 
