@@ -73,3 +73,12 @@
     * come up with code to extract from directory and rename using trackid
     * pull audio for list of unique track IDs from Kaggle data
 
+## Meeting with Paul 8/2/2023
+* Could average vectors
+    * 512-dimensional vector / 25 ms
+    * Start with 10 second offset and see how long it takes to encode different lengths of audio
+    * Compare to Spotify's own recommendation engine
+    * Compare to existing playlist
+    * Co-occurence frequency on playlists
+* Prioritize embedding/encoding
+* Secondary - clean up mp3 directory
