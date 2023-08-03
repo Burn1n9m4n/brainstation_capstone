@@ -1,28 +1,38 @@
 # Synesthete: A Music Recommendation System
-============================================
-
 ### Introduction
 **synesthete** ***(sĭn′ĭs-thēt″) - noun***
 
 ***A person who experiences synesthesia, a perceptual phenomenon in which stimulation of one sensory or cognitive pathway
 leads to involuntary experiences in a second sensory or cognitive pathway.***
 
-There are many music recommendation systems out there and many of them utilize sophisticated algorithms to achieve high 
-accuracy or leverage data gathered from the user over time in order to provide realistic suggestions. Synesthete is a
-unique recommendation engine that will provide immediate feedback to a user based on a audio sample provided immediately
-using no past information. The method by which it will do this is novel as well as it utilizes an audio encoder to change
-the data from auditory information to a spectrographic image. This image is then used as the input for a convolutional neural
-network (CNN) to provide recommendations to the user based on image similarity. 
+There are many music recommendation systems out there and many of them utilize sophisticated algorithms or leverage data 
+gathered from the user over time in order to provide realistic suggestions and high accuracy. Synesthete is a unique recommendation 
+engine that will provide immediate feedback to a user based on an audio sample using no past information. The method by which 
+it will do this is novel as well as it utilizes an audio encoder to change the data from auditory information to a spectrographic 
+image, which in turn is used as the input for a convolutional neural network (CNN). A recommendations is then provided to 
+the user based on image similarity. 
 
 And thus, Synesthete, is born. A deep learning engine that sees sound.
 
 ### The Problem Area
-My primary area of interest is entertainment and media related data and within this realm I wanted to investigate methods of recommending content to users. Specifically, I wanted to work on some kind of music recommendation engine for the purposes of providing users a means of discovering new artists and music. Content recommendation often requires the use of data gathered over time or from other existing users to make recommendations to new users. Moreover, these methods also suffer from the fact that inference is difficult to perform if the user is new which is also known as the cold start problem. 
+My primary area of interest is entertainment and media related data and within this realm I wanted to investigate methods of 
+recommending content to users. Specifically, I wanted to work on some kind of music recommendation engine for the purposes 
+of providing users a means of discovering new artists and music. Content recommendation often requires the use of data gathered
+over time or from other existing users to make recommendations to new users. Moreover, these methods also suffer from the fact
+that statistical inference is difficult to perform for a new user as there is little to no information from which to make a 
+prediction, which is also known as the cold start problem. 
 
-Within this sphere, I think that Synesthete could help immeasurably as it could provide recommendations immediately to a single user without requiring data to be gathered about that user beforehand. Moreover, the method that this engine will employ also does not require other users to have been present on the platform beforehand to act as a basis for comparison with a new user.  As such, I think the groups that experience the biggest problems related to this idea are the consumers and the platform owners. Users want to find new artists to listen to or discover music that is similar to the songs that they already like. Meanwhile, platform owners and content creators want to maintain the engagement of the audience as that translates into more views, subscription renewals, new subscribers, and ad revenue.
+Within this sphere, I think that Synesthete could help immeasurably as it could provide recommendations immediately to a single
+user without requiring data to be gathered about that user beforehand. Moreover, the method that this engine will employ does not 
+require other users to have been present on the platform beforehand to act as a basis for comparison with a new user.  As such, 
+I think the groups that experience the biggest problems related to this idea are the consumers and the platform owners. Users 
+want to find new artists to listen to or discover music that is similar to the songs that they already like. Meanwhile, platform 
+owners and content creators want to maintain the engagement of the audience as that translates into more views, subscription 
+renewals, new subscribers, and ad revenue.
 
 ### Proposed Solution
-After performing some research, it seems that a method that is very well suited to this purpose would be a convolutional neural network (CNN). In order to setup this neural network the following method is outlined:
+After performing some research, it seems that a method that is very well suited to this purpose would be a convolutional neural 
+network (CNN). In order to setup this neural network the following method is outlined:
 1.	Create spectrographic images of audio data via encoder/transformer
 2.	Vectorize images into n-dimensional vectors
 3.	Collate vectors into singular data set
@@ -34,13 +44,27 @@ After performing some research, it seems that a method that is very well suited 
 7.	Perform similarity calculation and provide top five most similar matches
     * i.	Cosine similarity given that two vectors are being compared
 
-While the above seems like a good generalized plan, at present it is not known what challenges or new information will come to light. As such, it should be noted that the above is more of a detailed guideline than a hard and fast plan of action at this present stage of development.
+While the above seems like a good generalized plan, at present it is not known what challenges or new information will come to 
+light. As such, it should be noted that the above is more of a detailed guideline than a hard and fast plan of action at this 
+present stage of development.
 
 ### The Impact
-Looking at the impact from a business standpoint, the creation of a solid recommendation system could end up generating millions of dollars in ad revenue. Realistically though, I think this particular project will at best showcase a potential methodology that has not yet been considered within a larger organization and could lead to the development of a more optimized model for recommendation that is more responsive to and in tune with the users of the platform upon which it is implemented. Moreover, it could also potentially provide some additional functionality to an existing app already published by a larger organization, such as Spotify or Apple. Finally, I think that the users stand to gain the largest benefit from this engine as it would provide a novel approach to finding new artists and music that is not only informative, but also entertaining in and of itself.
+Looking at the impact from a business standpoint, the creation of a solid recommendation system could end up generating millions 
+of dollars in ad revenue. Realistically though, I think this particular project will at best showcase a potential methodology that 
+has not yet been considered within a larger organization and could lead to the development of a more optimized model for recommendation 
+that is more responsive to and in tune with the users of the platform upon which it is implemented. Moreover, it could also potentially 
+provide some additional functionality to an existing app already published by a larger organization, such as Spotify or Apple. Finally, 
+I think that the users stand to gain the largest benefit from this engine as it would provide a novel approach to finding new artists 
+and music that is not only informative, but also entertaining in and of itself.
 
 ### The Data
-The data that is being used within this project will have to be created in order to train the model from actual music tracks. In order to get a large enough list of music tracks, the Spotify Kaggle data set [1] provides a robust list to start with. The data set contains 232,725 rows with each row representing a single musical track. Each track has several different features including duration, acousticness, danceability, energy and so on. However, these fields are, at least presently, not of interest to this project. For this project, the main focus is using the track_id feature as a means of uniquely identifying and downloading a large enough sample set to train a CNN. Each of these track IDs is concatenated with a base Spotify URL and then into the spotify_dl package. This provides a command line tool that can be run via python and executed in bash to download tracks. Looping through the IDs automates this process. Eventually, these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
+The data that is being used within this project will have to be created in order to train the model using actual music tracks. In order 
+to get a large enough set of music tracks, the Spotify Kaggle dataset [1] provides a robust list to start with. The dataset contains 
+232,725 rows with each row representing a single musical track. Each track has several different features including `duration`, `acousticness`, `danceability`, `energy` and so on. However, these fields are, at least presently, not of interest to this project. For this project, 
+the main focus is using the `track_id` feature as a means of uniquely identifying and downloading a large enough sample set to train a 
+CNN. Each of these track IDs is concatenated with a base Spotify URL to provide a URL to the `spotify_dl` package, which is a command 
+line tool that can be run via python and executed in bash to download tracks. Looping through the IDs automates this process. Eventually, 
+these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
 
 ### References
 1. Hamidani, Z. (2019, July 23). Spotify tracks DB. Kaggle. https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db?resource=download 
