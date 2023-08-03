@@ -9,6 +9,7 @@
 *.png
 *.jpg
 *.mp3
+*.parquet
 **/mp3s/*
 
 # Information and Articles
