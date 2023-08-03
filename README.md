@@ -1,4 +1,4 @@
-# Synesthete: A Music Recommendation System
+# Synesthete: A Deep Learning Engine that Sees Sound
 ### Introduction
 **synesthete** ***(sĭn′ĭs-thēt″) - noun***
 
