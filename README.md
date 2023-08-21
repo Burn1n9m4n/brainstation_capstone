@@ -68,16 +68,26 @@ line tool that can be run via python and executed in bash to download tracks. Lo
 these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
 
 ### Project Flowchart
-
-...
-...
-...
+The general code flow for this project is as follows. Note that this is not final and is subject to change.
+1. Ingest Kaggle data
+2. Randommally sample 30,000 track_ids from dataset
+3. Set while loop with limit of 12,000 and feed each track_id into `spotify_dl` to download audio as `.mp3`
+4. Use `librosa` package to encode mp3 data into 498-dimension vector
+5. Calculate pairwise cosine similarity using `pairwise` from `sklearn.metrics`
+6. Sort resulting array and extract individual similarity vector for a given track (one row within array)
+7. Use those numerical indicies within the Kaggle DataFrame to obtain the song and its top 5 matches
+8. Create a playlist using those track_ids within an API call for the user
+9. With new tracks, generate feature vector and calculate pairwise similarity before repeating steps
+6-8.
 
 ### Project Organization
-
-...
-...
-...
+The project is current organized so that all code is within Jupyter Notebooks. This may change in the future 
+if the app requires a shift to `.py` files. All notebooks are contained with the notebooks directory. Data is 
+stored within the data directory. However, at present the mp3 audio, vectorized mp3s, and complete vectorized data 
+are not present in the repo due to potential space limitations. Likewise, the Kaggle dataset is not present within 
+the data directory at this present time. Credits and references are compiled within this README.md, with specific links 
+presented within the REFERENCES.md in the references directory. DEV_NOTES.md is a collection of raw development notes 
+from planning meetings.
 
 ### Walkthrough Demo
 
@@ -137,8 +147,5 @@ these MP3s will be vectorized into n-dimensional vectors, collated into a singul
 9. Roberts, Leland. “Understanding the Mel Spectrogram.” Medium, Analytics Vidhya, 17 Aug. 2022, medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53.
 10. “Tonnetz.” Wikipedia, Wikimedia Foundation, 25 July 2023, en.wikipedia.org/wiki/Tonnetz.
 11. YouTube, YouTube, 8 Apr. 2023, https://www.youtube.com/watch?v=mBycigbJQzA. Accessed 21 Aug. 2023. 
-...
-...
-...
 
 --------
