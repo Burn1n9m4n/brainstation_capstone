@@ -91,3 +91,4 @@
 * I need to make a train-test split for pairwise similarity. That will help me evaluate the model.
     * May need to speak to Paul about how to go about making it
 * Visualize the summary statistics from the recommendations to better tell the story to the audience
+* Need to check if I handled the Project Flowchart and Organization sections of the README.
