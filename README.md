@@ -126,7 +126,17 @@ these MP3s will be vectorized into n-dimensional vectors, collated into a singul
 ...
 
 ### Credits & References
-1. Hamidani, Z. (2019, July 23). Spotify tracks DB. Kaggle. https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db?resource=download 
+1. “Chroma Feature.” Wikipedia, Wikimedia Foundation, 27 July 2023, en.wikipedia.org/wiki/Chroma_feature.
+2. Hamidani, Zaheen. “Spotify Tracks DB.” Kaggle, 23 July 2019, www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db?resource=download.
+3. katiagilligan888. “Spotify-Discover-Weekly.” GitHub, github.com/katiagilligan888/Spotify-Discover-Weekly. Accessed 21 Aug. 2023. 
+4. Lheureux, Adil. “Music Genre Classification Using Librosa and Tensorflow/Keras.” Paperspace Blog, Paperspace Blog, 11 Aug. 2022, blog.paperspace.com/music-genre-classification-using-librosa-and-pytorch/.
+5. “librosa.feature.chroma_stft.” Librosa.Feature.Chroma_stft - Librosa 0.10.1 Documentation, librosa.org/doc/latest/generated/librosa.feature.chroma_stft.html. Accessed 21 Aug. 2023.
+6. “librosa.feature.melspectrogram.” Librosa.Feature.Melspectrogram - Librosa 0.10.1 Documentation, librosa.org/doc/latest/generated/librosa.feature.melspectrogram.html. Accessed 20 Aug. 2023.
+7. “Librosa.Feature.Tonnetz.” Librosa.Feature.Tonnetz - Librosa 0.10.1 Documentation, librosa.org/doc/latest/generated/librosa.feature.tonnetz.html. Accessed 21 Aug. 2023.
+8. “Mel-Frequency Cepstrum.” Wikipedia, Wikimedia Foundation, 14 Aug. 2023, en.wikipedia.org/wiki/Mel-frequency_cepstrum.
+9. Roberts, Leland. “Understanding the Mel Spectrogram.” Medium, Analytics Vidhya, 17 Aug. 2022, medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53.
+10. “Tonnetz.” Wikipedia, Wikimedia Foundation, 25 July 2023, en.wikipedia.org/wiki/Tonnetz.
+11. YouTube, YouTube, 8 Apr. 2023, https://www.youtube.com/watch?v=mBycigbJQzA. Accessed 21 Aug. 2023. 
 ...
 ...
 ...
