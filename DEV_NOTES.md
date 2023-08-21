@@ -82,3 +82,12 @@
     * Co-occurence frequency on playlists
 * Prioritize embedding/encoding
 * Secondary - clean up mp3 directory
+
+## Feedback from Sprint 2 8/21/2023
+* Should include limitations within the Next Steps slide
+* Figure out units on Chroma Vector slide (I think the y is pitch class and the x is time)
+* Demo took up a lot of time
+* I was 7 minutes over (ooof!)
+* I need to make a train-test split for pairwise similarity. That will help me evaluate the model.
+    * May need to speak to Paul about how to go about making it
+    
