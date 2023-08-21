@@ -83,7 +83,7 @@
 * Prioritize embedding/encoding
 * Secondary - clean up mp3 directory
 
-## Feedback from Sprint 2 8/21/2023
+## Sprint 2 Feedback 8/21/2023
 * Should include limitations within the Next Steps slide
 * Figure out units on Chroma Vector slide (I think the y is pitch class and the x is time)
 * Demo took up a lot of time
