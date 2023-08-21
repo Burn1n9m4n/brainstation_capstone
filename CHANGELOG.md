@@ -1,3 +1,8 @@
+## 1.1.3
+    * FEAT: Created complete Sprint 2 notebook for submission.
+    * FEAT: Updated README.md for Sprint 2.
+    * FEAT: Added code to create playlists and add tracks.
+    
 ## 1.1.2
     * FEAT: Updated sleep timer on downloader to 10 seconds
     * FEAT: Rearranged counter to properly enumerate mp3s that have already been downloaded.
