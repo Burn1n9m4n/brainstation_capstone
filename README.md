@@ -60,22 +60,12 @@ and music that is not only informative, but also entertaining in and of itself.
 ### The Data
 The data that is being used within this project will have to be created in order to train the model using actual music tracks. In order 
 to get a large enough set of music tracks, the Spotify Kaggle dataset [1] provides a robust list to start with. The dataset contains 
-232,725 rows with each row representing a single musical track. Each track has several different features including `duration`, `acousticness`, `danceability`, `energy` and so on. However, these fields are, at least presently, not of interest to this project. For this project, 
+232,725 rows with each row representing a single musical track. Each track has several different features including `duration`, `acousticness`, 
+`danceability`, `energy` and so on. However, these fields are, at least presently, not of interest to this project. For this project, 
 the main focus is using the `track_id` feature as a means of uniquely identifying and downloading a large enough sample set to train a 
 CNN. Each of these track IDs is concatenated with a base Spotify URL to provide a URL to the `spotify_dl` package, which is a command 
 line tool that can be run via python and executed in bash to download tracks. Looping through the IDs automates this process. Eventually, 
 these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
-
-### References
-1. Hamidani, Z. (2019, July 23). Spotify tracks DB. Kaggle. https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db?resource=download 
-
-
-
-### Walkthrough Demo
-
-...
-...
-...
 
 ### Project Flowchart
 
@@ -84,6 +74,12 @@ these MP3s will be vectorized into n-dimensional vectors, collated into a singul
 ...
 
 ### Project Organization
+
+...
+...
+...
+
+### Walkthrough Demo
 
 ...
 ...
@@ -130,7 +126,7 @@ these MP3s will be vectorized into n-dimensional vectors, collated into a singul
 ...
 
 ### Credits & References
-
+1. Hamidani, Z. (2019, July 23). Spotify tracks DB. Kaggle. https://www.kaggle.com/datasets/zaheenhamidani/ultimate-spotify-tracks-db?resource=download 
 ...
 ...
 ...
