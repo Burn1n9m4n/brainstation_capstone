@@ -92,3 +92,28 @@
     * May need to speak to Paul about how to go about making it
 * Visualize the summary statistics from the recommendations to better tell the story to the audience
 * Need to check if I handled the Project Flowchart and Organization sections of the README.
+
+## Meeting with Laura and Stephen 8/23/2023
+* What makes a song?
+    * Trying to figure out what to determine similarity on was difficult
+    * Let the machine figure it out!
+* Build two models and compete with myself
+    * One based on pitch and one based on frequency?
+    * This gets to a meta question
+    * Compare song 1 from pitch to song 1 from frequency, so on and so forth
+    * Could also do average similarity score
+    * Average difference for each song position in recommendation list
+* Find singers with similar voices to yours?
+* Could compare to Spotify's recommendations?
+* How good is my model vs a human?
+    * Run song as input
+    * Create playlist with algo and then have human create playlist
+    * Compare the two
+        * If human is close to 1, you are better than the algo
+    * Human vs Agent
+    * Agent vs Agent
+    * Agent vs Spotify
+    * Can you beat the algo in terms of constructing a playlist?
+* Network analysis
+    * 3 dimensional PCA
+    * Find nearest neighbors within space
