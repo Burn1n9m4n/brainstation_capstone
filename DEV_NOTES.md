@@ -117,3 +117,5 @@
 * Network analysis
     * 3 dimensional PCA
     * Find nearest neighbors within space
+* Make sure to test out multiple algorithms before committing to a given idea
+    * Logistic regression (is song similar to source vs not similar)
