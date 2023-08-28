@@ -119,3 +119,8 @@
     * Find nearest neighbors within space
 * Make sure to test out multiple algorithms before committing to a given idea
     * Logistic regression (is song similar to source vs not similar)
+
+## Meeting with Paul 8/28/2023
+* Check existing playlist databases
+    * Look for co-occurences of songs and recommendations
+        * Market Basket Analysis/Evaluation
