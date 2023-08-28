@@ -124,3 +124,5 @@
 * Check existing playlist databases
     * Look for co-occurences of songs and recommendations
         * Market Basket Analysis/Evaluation
+    * Human curated playlists
+    * Creates a user base to compare to with the user that is similar
