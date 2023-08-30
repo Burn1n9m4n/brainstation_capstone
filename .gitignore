@@ -11,6 +11,7 @@
 *.mp3
 *.parquet
 **/mp3s/*
+*.npy
 
 # Information and Articles
 *.htm
