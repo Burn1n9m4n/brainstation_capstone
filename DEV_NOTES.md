@@ -126,3 +126,11 @@
         * Market Basket Analysis/Evaluation
     * Human curated playlists
     * Creates a user base to compare to with the user that is similar
+
+## Meeting with Sam 8/31/2023
+* Silhouette score
+* Could run DBSCAN to get clustering
+    * Could then compare to cluster occupants
+    * Could run K-Means as well using elbow technique
+    * Pass data point back into training set to get cluster and then look at the cluster
+    
