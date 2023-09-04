@@ -88,7 +88,7 @@ are not present in the repo due to potential space limitations. Likewise, the Ka
 the data directory as it is available online. Credits and references are compiled within this README.md. DEV_NOTES.md 
 is a collection of raw development notes from planning meetings. A tree diagram of the project's structure can be found
 below (Note: Data directories that contain more than 20 files will not be shown):
-
+```
 brainstation_capstone
 ├── CHANGELOG.md
 ├── DEV_NOTES.md
@@ -139,7 +139,7 @@ brainstation_capstone
     └── visualization
         ├── __init__.py
         └── visualize.py
-
+```
 
 ### Walkthrough Demo
 
