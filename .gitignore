@@ -7,8 +7,9 @@
 *.zip
 *.mp3
 **/mp3s/*
-**/vectorized_mp3s/cnn_parquets/
-**/vectorized_mp3s/pairwise_parquets/
+**/vectorized_mp3s/cnn_parquets/*
+**/vectorized_mp3s/pairwise_parquets/*
+**/vectorized_mp3s/raw/*
 *.npy
 
 # Information and Articles
