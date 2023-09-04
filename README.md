@@ -84,10 +84,9 @@ The general code flow for this project is as follows. Note that this is not fina
 The project is current organized so that all code is within Jupyter Notebooks. This may change in the future 
 if the app requires a shift to `.py` files. All notebooks are contained within the notebooks directory. Data is 
 stored within the data directory. However, at present the mp3 audio, vectorized mp3s, and complete vectorized data 
-are not present in the repo due to potential space limitations. Likewise, the Kaggle dataset is not present within 
-the data directory as it is available online. Credits and references are compiled within this README.md. DEV_NOTES.md 
-is a collection of raw development notes from planning meetings. A tree diagram of the project's structure can be found
-below (Note: Data directories that contain more than 20 files will not be shown):
+are not present in the repo due to potential space limitations. Credits and references are compiled within this 
+README.md. DEV_NOTES.md is a collection of raw development notes from planning meetings. A tree diagram of the 
+project's structure can be found below (Note: Data directories that contain more than 20 files will not be shown):
 
 ```
 brainstation_capstone
