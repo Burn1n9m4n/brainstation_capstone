@@ -111,9 +111,8 @@ brainstation_capstone
 │       ├── pairwise_parquets  [11578 entries exceeds filelimit, not opening dir]
 │       └── raw  [46312 entries exceeds filelimit, not opening dir]
 ├── notebooks
-│   ├── development  [23 entries exceeds filelimit, not opening dir]
-│   └── latest
-│       └── 20230905_sprint3_checkpoint.ipynb
+│   ├── 20230905_sprint3_checkpoint.ipynb
+│   └── development  [23 entries exceeds filelimit, not opening dir]
 ├── reports
 │   ├── 20230728_synesthete_brainstation_sprint1_vk.pdf
 │   └── 20230821_synesthete_brainstation_sprint2_vk.pdf
