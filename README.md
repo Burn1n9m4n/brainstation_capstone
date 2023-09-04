@@ -68,16 +68,23 @@ line tool that can be run via python and executed in bash to download tracks. Lo
 these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
 
 ### Project Flowchart
+
+![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/598bbe84fba204d2490cb904db80194c0761d129/reports/images/20230905_project_flow.drawio.png)
+
 The general code flow for this project is as follows. Note that this is not final and is subject to change.
 1. Ingest Kaggle data
 2. Randommally sample 30,000 track_ids from dataset
 3. Set while loop with limit of 12,000 and feed each track_id into `spotify_dl` to download audio as `.mp3`
-4. Use `librosa` package to encode mp3 data into 498-dimension vector
-5. Calculate pairwise cosine similarity using `pairwise` from `sklearn.metrics`
-6. Sort resulting array and extract individual similarity vector for a given track (one row within array)
-7. Use those numerical indicies within the Kaggle DataFrame to obtain the song and its top 5 matches
-8. Create a playlist using those track_ids within an API call for the user
-9. With new tracks, generate feature vector and calculate pairwise similarity before repeating steps
+    1. Obtain at least 10,000 tracks for model training
+4. Use `librosa` package to extract Mel Spectrum, MFCC, Chroma, and Tonnetz features
+5. Extract features for models
+    1. Extract mean, min, and max to encode mp3 data into 1x498 vector for pairwise cosine similarity
+    2. Stack Mel Spectrum, Chroma, and Tonnetz into image and use ResNet50 to create 1x1000 embedding
+6. Calculate pairwise cosine similarity using `pairwise` from `sklearn.metrics`
+7. Sort resulting arrays and extract individual similarity vector for a given track (one row within array)
+8. Use those numerical indicies within the Kaggle DataFrame to obtain the song and its top 10 matches
+9. Create a playlist using those track_ids within an API call for the user
+10. With new tracks, generate feature vectors (4) and calculate pairwise similarity before repeating steps
 6-8.
 
 ### Project Organization
