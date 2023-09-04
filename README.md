@@ -122,7 +122,6 @@ brainstation_capstone
 │   └── figures
 │       └── project-flowchart.svg
 └── requirements.txt
-
 ```
 
 ### Walkthrough Demo
