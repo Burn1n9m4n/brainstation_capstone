@@ -111,16 +111,12 @@ brainstation_capstone
 │       ├── pairwise_parquets  [11578 entries exceeds filelimit, not opening dir]
 │       └── raw  [46312 entries exceeds filelimit, not opening dir]
 ├── notebooks
-│   ├── __pycache__
-│   │   └── 20230816_authorization_code_flow.cpython-38.pyc
 │   ├── development  [23 entries exceeds filelimit, not opening dir]
 │   └── latest
 │       └── 20230905_sprint3_checkpoint.ipynb
 ├── reports
 │   ├── 20230728_synesthete_brainstation_sprint1_vk.pdf
-│   ├── 20230821_synesthete_brainstation_sprint2_vk.pdf
-│   └── figures
-│       └── project-flowchart.svg
+│   └── 20230821_synesthete_brainstation_sprint2_vk.pdf
 └── requirements.txt
 ```
 
