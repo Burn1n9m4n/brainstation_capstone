@@ -11,9 +11,9 @@ leads to involuntary experiences in a second sensory or cognitive pathway.***
 There are many music recommendation systems out there and many of them utilize sophisticated algorithms or leverage data 
 gathered from the user over time in order to provide realistic suggestions and high accuracy. Synesthete is a unique recommendation 
 engine that will provide immediate feedback to a user based on an audio sample using no past information. The method by which 
-it will do this is novel as well as it utilizes an audio encoder to change the data from auditory information to a spectrographic 
-image, which in turn is used as the input for a convolutional neural network (CNN). A recommendations is then provided to 
-the user based on image similarity. 
+it will do this is novel as well as it utilizes an audio encoder to change the data from auditory information to a series of 
+spectrographic images, which in turn are used as the input for a convolutional neural network (CNN). Track recommendations are 
+then provided to the user based on image similarity. 
 
 And thus, Synesthete, is born. A deep learning engine that sees sound.
 
@@ -21,9 +21,9 @@ And thus, Synesthete, is born. A deep learning engine that sees sound.
 My primary area of interest is entertainment and media related data and within this realm I wanted to investigate methods of 
 recommending content to users. Specifically, I wanted to work on some kind of music recommendation engine for the purposes 
 of providing users a means of discovering new artists and music. Content recommendation often requires the use of data gathered
-over time or from other existing users to make recommendations to new users. Moreover, these methods also suffer from the fact
-that statistical inference is difficult to perform for a new user as there is little to no information from which to make a 
-prediction, which is also known as the cold start problem. 
+over time or from other existing users to make recommendations to new users. However, these methods suffer from the fact
+that statistical inference is difficult, if not impossible, to perform for a new user as there is little to no information from 
+which to make a prediction, which is also known as the cold start problem. 
 
 Within this sphere, I think that Synesthete could help immeasurably as it could provide recommendations immediately to a single
 user without requiring data to be gathered about that user beforehand. Moreover, the method that this engine will employ does not 
@@ -36,20 +36,23 @@ renewals, new subscribers, and ad revenue.
 ### Proposed Solution
 After performing some research, it seems that a method that is very well suited to this purpose would be a convolutional neural 
 network (CNN). In order to setup this neural network the following method is outlined:
-1.	Create spectrographic images of audio data via encoder/transformer
-2.	Vectorize images into n-dimensional vectors
-3.	Collate vectors into singular data set
-4.	Train convolutional neural network model (CNN)
-5.	Accept user input
+1.  Gather audio data
+2.  Create spectrographic images of audio data via encoder/transformer
+3.	Vectorize images into n-dimensional vectors
+4.	Collate vectors into singular data set
+5.	Train models 
+    * Convolutional neural network model (CNN)
+    * Standard pairwise cosine similarity
+6.	Accept user input
     * i.	Audio recording captured from phone
     * ii.	Audio file provided to model
-6.	Convert into image via encoder
-7.	Perform similarity calculation and provide top five most similar matches
+7.	Convert into image via encoder
+    * Or vectorized data
+8.	Perform similarity calculation and provide top ten most similar matches
     * i.	Cosine similarity given that two vectors are being compared
 
-While the above seems like a good generalized plan, at present it is not known what challenges or new information will come to 
-light. As such, it should be noted that the above is more of a detailed guideline than a hard and fast plan of action at this 
-present stage of development.
+The above acted as a detailed guideline rather than a hard and fast plan of action during development. The finalized procedure 
+is showing in the Project Flowchart section and is vieweable within the latest Jupyter Notebook in the `notebooks` directory.
 
 ### The Impact
 Looking at the impact from a business standpoint, the creation of a solid recommendation system could end up generating millions 
@@ -62,19 +65,17 @@ and music that is not only informative, but also entertaining in and of itself.
 
 ### The Data
 The data that is being used within this project will have to be created in order to train the model using actual music tracks. In order 
-to get a large enough set of music tracks, the Spotify Kaggle dataset [1] provides a robust list to start with. The dataset contains 
-232,725 rows with each row representing a single musical track. Each track has several different features including `duration`, `acousticness`, 
-`danceability`, `energy` and so on. However, these fields are, at least presently, not of interest to this project. For this project, 
-the main focus is using the `track_id` feature as a means of uniquely identifying and downloading a large enough sample set to train a 
-CNN. Each of these track IDs is concatenated with a base Spotify URL to provide a URL to the `spotify_dl` package, which is a command 
-line tool that can be run via python and executed in bash to download tracks. Looping through the IDs automates this process. Eventually, 
-these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train the CNN model.
+to get a large enough set of music tracks, the Spotify Kaggle dataset [2] provides a robust list to start with. The dataset contains 
+232,725 rows with each row representing a single musical track. Each track has several different features including `duration`, `acousticness`, `danceability`, `energy` and so on. However, these fields are, at least presently, not of interest to this project 
+with respect to model training. For this project, the main focus is using the `track_id` feature as a means of uniquely identifying 
+and downloading a large enough sample set to train models (one of which is a CNN). Each of these track IDs is concatenated with a base Spotify URL to provide a URL to the `spotify_dl` package, which is a command line tool that can be run via python and executed in bash 
+to download tracks. Looping through the IDs automates this process. Eventually, these MP3s will be vectorized into n-dimensional vectors, collated into a singular dataset, and used to train recommendation models.
 
 ### Project Flowchart
 
 ![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/598bbe84fba204d2490cb904db80194c0761d129/reports/images/20230905_project_flow.drawio.png)
 
-The general code flow for this project is as follows. Note that this is not final and is subject to change.
+The general code flow follows the diagram shown above. Further details are described below:
 1. Ingest Kaggle data
 2. Randommally sample 30,000 track_ids from dataset
 3. Set while loop with limit of 12,000 and feed each track_id into `spotify_dl` to download audio as `.mp3`
@@ -90,12 +91,14 @@ The general code flow for this project is as follows. Note that this is not fina
 10. With new tracks, repeat steps 3-8.
 
 ### Project Organization
-The project is current organized so that all code is within Jupyter Notebooks. This may change in the future 
-if the app requires a shift to `.py` files. All notebooks are contained within the notebooks directory. Data is 
-stored within the data directory. However, at present the mp3 audio, vectorized mp3s, and complete vectorized data 
-are not present in the repo due to potential space limitations. Credits and references are compiled within this 
+The project is currently organized so that all code is within Jupyter Notebooks. This may change in the future 
+if the app requires a shift to `.py` files. All notebooks are contained within the `notebooks` directory. Data is 
+stored within the `data` directory. However, at present the mp3 audio, vectorized mp3s, and raw numpy files are 
+not present in the repo due to potential space limitations. A 'Credits & References' section is compiled within this 
 README.md. DEV_NOTES.md is a collection of raw development notes from planning meetings. A tree diagram of the 
-project's structure can be found below (Note: Data directories that contain more than 20 files will not be shown):
+project's structure can be found below. It was obtained by running `tree --filelimit 20 -I "*cache*"` in a bash 
+prompt. Note that data directories that contain more than 20 files will not be shown nor will any file contianing
+the word 'cache', which will remove any `.cache` files or `__pycache__` folders.
 
 ```
 brainstation_capstone
@@ -130,8 +133,9 @@ More information on the individual components within the project can be found be
 
 * `data` 
     - contains all data generated by code within this project
-    - `SpotifyFeatures.csv` is required to get track information
-    - `unique_track_ids_for_training.parquet` is a list of unique `track_id` used to train models and can be used to ensure reproducibility
+    - `SpotifyFeatures.csv` is required to get track information [2]
+    - `unique_track_ids_for_training.parquet` is a list of unique `track_id` used to train models and can also be 
+    used to ensure reproducibility
         - list contains 11,578 unique `track_id`
     - `model_means_df.parquet`contains information on mean similarities for each track for each of the models
     - `cnn_complete_parquets` and `pairwise_complete_parquets` contain all vectorized audio data for use in models.
@@ -142,7 +146,8 @@ More information on the individual components within the project can be found be
 
 * `reports`
     - contains all sprint reports for this project
-    - Also contains `images` directory which houses all images for this repo along with editor files (eg: `.drawio` files)
+    - Also contains `images` directory which houses all images for this repo along with editor files 
+    (eg: `.drawio` files)
 
 * `.gitignore`
     - Part of Git, includes files and folders to be ignored by Git version control
@@ -154,7 +159,9 @@ More information on the individual components within the project can be found be
     - Project license
 
 ### Dataset
-The dataset for this project consists of 11,578 unique audio tracks that were obtained through a random sample of the `SpotifyFeatures.csv` data obtained from Kaggle. Features were then engineered using the `librosa` package. The features generated for each model are listed below:
+The dataset for this project consists of 11,578 unique audio tracks that were obtained through a random sample of the 
+`SpotifyFeatures.csv` data obtained from Kaggle. Features were then obtained from the audio data using the `librosa` 
+package. The features generated for each model are listed below:
 * Normal Pairwise Model
     * MFCC
     * Mel Spectrum
