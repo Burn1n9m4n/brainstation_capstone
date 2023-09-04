@@ -82,12 +82,64 @@ The general code flow for this project is as follows. Note that this is not fina
 
 ### Project Organization
 The project is current organized so that all code is within Jupyter Notebooks. This may change in the future 
-if the app requires a shift to `.py` files. All notebooks are contained with the notebooks directory. Data is 
+if the app requires a shift to `.py` files. All notebooks are contained within the notebooks directory. Data is 
 stored within the data directory. However, at present the mp3 audio, vectorized mp3s, and complete vectorized data 
 are not present in the repo due to potential space limitations. Likewise, the Kaggle dataset is not present within 
-the data directory at this present time. Credits and references are compiled within this README.md, with specific links 
-presented within the REFERENCES.md in the references directory. DEV_NOTES.md is a collection of raw development notes 
-from planning meetings.
+the data directory as it is available online. Credits and references are compiled within this README.md. DEV_NOTES.md 
+is a collection of raw development notes from planning meetings. A tree diagram of the project's structure can be found
+below (Note: Data directories that contain more than 20 files will not be shown):
+
+brainstation_capstone
+├── CHANGELOG.md
+├── DEV_NOTES.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── data
+│   ├── 20230903_model_means_df.parquet
+│   ├── 20230903_unique_track_ids_for_training.parquet
+│   ├── SpotifyFeatures.csv
+│   ├── archive.zip
+│   ├── data-links.md
+│   ├── mp3s  [11922 entries exceeds filelimit, not opening dir]
+│   └── vectorized_mp3s
+│       ├── cnn_complete_parquets
+│       │   └── 20230901_complete_cnn_data.parquet
+│       ├── cnn_parquets  [11578 entries exceeds filelimit, not opening dir]
+│       ├── pairwise_complete_parquets
+│       │   ├── 20230830_complete_vectorized_data_pairwise.parquet
+│       │   ├── 20230831_complete_vectorized_data.parquet
+│       │   └── 20230901_complete_pairwise_data.parquet
+│       ├── pairwise_parquets  [11578 entries exceeds filelimit, not opening dir]
+│       └── raw  [46312 entries exceeds filelimit, not opening dir]
+├── environment.yml
+├── model
+│   └── sentiment-model.pkl
+├── notebooks  [30 entries exceeds filelimit, not opening dir]
+├── references
+│   └── REFERENCES.md
+├── reports
+│   ├── 20230728_synesthete_brainstation_sprint1_vk.pdf
+│   ├── 20230821_synesthete_brainstation_sprint2_vk.pdf
+│   └── figures
+│       └── project-flowchart.svg
+├── requirements.txt
+└── src
+    ├── __init__.py
+    ├── data
+    │   ├── __init__.py
+    │   └── make_dataset.py
+    ├── features
+    │   ├── __init__.py
+    │   └── build_features.py
+    ├── models
+    │   ├── __init__.py
+    │   ├── predict_model.py
+    │   └── train_model.py
+    └── visualization
+        ├── __init__.py
+        └── visualize.py
+
 
 ### Walkthrough Demo
 
