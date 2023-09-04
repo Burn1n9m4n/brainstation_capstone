@@ -84,8 +84,7 @@ The general code flow for this project is as follows. Note that this is not fina
 7. Sort resulting arrays and extract individual similarity vector for a given track (one row within array)
 8. Use those numerical indicies within the Kaggle DataFrame to obtain the song and its top 10 matches
 9. Create a playlist using those track_ids within an API call for the user
-10. With new tracks, generate feature vectors (4) and calculate pairwise similarity before repeating steps
-6-8.
+10. With new tracks, repeat steps 3-8.
 
 ### Project Organization
 The project is current organized so that all code is within Jupyter Notebooks. This may change in the future 
