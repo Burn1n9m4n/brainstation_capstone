@@ -88,19 +88,17 @@ are not present in the repo due to potential space limitations. Likewise, the Ka
 the data directory as it is available online. Credits and references are compiled within this README.md. DEV_NOTES.md 
 is a collection of raw development notes from planning meetings. A tree diagram of the project's structure can be found
 below (Note: Data directories that contain more than 20 files will not be shown):
+
 ```
 brainstation_capstone
 ├── CHANGELOG.md
 ├── DEV_NOTES.md
 ├── LICENSE
-├── Makefile
 ├── README.md
 ├── data
 │   ├── 20230903_model_means_df.parquet
 │   ├── 20230903_unique_track_ids_for_training.parquet
 │   ├── SpotifyFeatures.csv
-│   ├── archive.zip
-│   ├── data-links.md
 │   ├── mp3s  [11922 entries exceeds filelimit, not opening dir]
 │   └── vectorized_mp3s
 │       ├── cnn_complete_parquets
@@ -112,33 +110,19 @@ brainstation_capstone
 │       │   └── 20230901_complete_pairwise_data.parquet
 │       ├── pairwise_parquets  [11578 entries exceeds filelimit, not opening dir]
 │       └── raw  [46312 entries exceeds filelimit, not opening dir]
-├── environment.yml
-├── model
-│   └── sentiment-model.pkl
-├── notebooks  [30 entries exceeds filelimit, not opening dir]
-├── references
-│   └── REFERENCES.md
+├── notebooks
+│   ├── __pycache__
+│   │   └── 20230816_authorization_code_flow.cpython-38.pyc
+│   ├── development  [23 entries exceeds filelimit, not opening dir]
+│   └── latest
+│       └── 20230905_sprint3_checkpoint.ipynb
 ├── reports
 │   ├── 20230728_synesthete_brainstation_sprint1_vk.pdf
 │   ├── 20230821_synesthete_brainstation_sprint2_vk.pdf
 │   └── figures
 │       └── project-flowchart.svg
-├── requirements.txt
-└── src
-    ├── __init__.py
-    ├── data
-    │   ├── __init__.py
-    │   └── make_dataset.py
-    ├── features
-    │   ├── __init__.py
-    │   └── build_features.py
-    ├── models
-    │   ├── __init__.py
-    │   ├── predict_model.py
-    │   └── train_model.py
-    └── visualization
-        ├── __init__.py
-        └── visualize.py
+└── requirements.txt
+
 ```
 
 ### Walkthrough Demo
