@@ -177,7 +177,7 @@ brainstation_capstone
 7. “Librosa.Feature.Tonnetz.” Librosa.Feature.Tonnetz - Librosa 0.10.1 Documentation, https://librosa.org/doc/latest/generated/librosa.feature.tonnetz.html. Accessed 21 Aug. 2023.
 8. “Mel-Frequency Cepstrum.” Wikipedia, Wikimedia Foundation, 14 Aug. 2023, https://en.wikipedia.org/wiki/Mel-frequency_cepstrum.
 9. Roberts, Leland. “Understanding the Mel Spectrogram.” Medium, Analytics Vidhya, 17 Aug. 2022, https://medium.com/analytics-vidhya/understanding-the-mel-spectrogram-fca2afa2ce53.
-10. “Tonnetz.” Wikipedia, Wikimedia Foundation, 25 July 2023, en.wikipedia.org/wiki/Tonnetz.
-11. YouTube, YouTube, 8 Apr. 2023, https://www.youtube.com/watch?v=mBycigbJQzA. Accessed 21 Aug. 2023. 
+10. “Tonnetz.” Wikipedia, Wikimedia Foundation, 25 July 2023, https://en.wikipedia.org/wiki/Tonnetz.
+11. "Spotify OAuth: Automating Discover Weekly Playlist - Full Tutorial", YouTube, YouTube, 8 Apr. 2023, https://www.youtube.com/watch?v=mBycigbJQzA. Accessed 21 Aug. 2023. 
 
 --------
