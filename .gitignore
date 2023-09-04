@@ -2,15 +2,13 @@
 .venv
 
 # Data Files
-*.csv
 *.xls
 *.xlsx
 *.zip
-*.png
-*.jpg
 *.mp3
-*.parquet
 **/mp3s/*
+**/vectorized_mp3s/cnn_parquets/
+**/vectorized_mp3s/pairwise_parquets/
 *.npy
 
 # Information and Articles
