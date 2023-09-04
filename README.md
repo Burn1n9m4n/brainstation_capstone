@@ -1,6 +1,6 @@
 # Synesthete: A Deep Learning Engine that Sees Sound
 
-![Visualization of Mel Spectrum, Chroma, and Tonnetz from Audio Data](https://github.com/Burn1n9m4n/brainstation_capstone/blob/d8acbcf162273cd5030dc273a23c0a8320de3799/reports/images/20230904_readme_splash.png)
+![Visualization of Mel Spectrum, Chroma, and Tonnetz from Audio Data](https://github.com/Burn1n9m4n/brainstation_capstone/blob/d8acbcf162273cd5030dc273a23c0a8320de3799/reports/images/20230904_readme_splash.png) 
 
 ### Introduction
 **synesthete** ***(sĭn′ĭs-thēt″) - noun***
