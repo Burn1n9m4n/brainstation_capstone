@@ -1,3 +1,16 @@
+## 1.2.0
+    * FEAT: Consolidated all code into Sprint 3 notebook.
+    * FIX: Moved all development notebooks into separate directory within notebooks directory
+    * FIX: Removed all unused template files
+    * UPDATE: Revised and finalized README.md
+    * UPDATE: Added flow chart to README.md
+    * UPDATE: Added CNN audio image output to top of README as splash image
+    * FEAT: Added Sprint 3 presentation to reports
+    * FEAT: Updated Credits & References in README to include all sources
+    * FIX: Updated gitignore to exclude specific directories, but allow for some data files to be uploaded
+    * FEAT: Added directory tree to README.md
+    * FEAt: Updated requirements.txt to match final submission
+
 ## 1.1.3
     * FEAT: Created complete Sprint 2 notebook for submission.
     * FEAT: Updated README.md for Sprint 2.
