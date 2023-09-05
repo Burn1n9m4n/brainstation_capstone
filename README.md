@@ -1,6 +1,6 @@
 # Synesthete: A Deep Learning Engine that Sees Sound
 
-![Visualization of Mel Spectrum, Chroma, and Tonnetz from Audio Data](https://github.com/Burn1n9m4n/brainstation_capstone/blob/0c17f599a4d83926313a69da2ce7353decf85032/reports/images/20230905_project_flow_drawio_dark.png)
+![Visualization of Mel Spectrum, Chroma, and Tonnetz from Audio Data](https://github.com/Burn1n9m4n/brainstation_capstone/blob/48a4685fbf96c189c132e42e276c41f2692c6f6a/reports/images/20230904_readme_splash.png)
 
 ### Introduction
 **synesthete** ***(sĭn′ĭs-thēt″) - noun***
@@ -73,7 +73,7 @@ to download tracks. Looping through the IDs automates this process. Eventually, 
 
 ### Project Flowchart
 
-![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/598bbe84fba204d2490cb904db80194c0761d129/reports/images/20230905_project_flow.drawio.png)
+![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/0c17f599a4d83926313a69da2ce7353decf85032/reports/images/20230905_project_flow_drawio_dark.png)
 
 The general code flow follows the diagram shown above. Further details are described below:
 1. Ingest Kaggle data
