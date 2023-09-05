@@ -104,7 +104,6 @@ the word 'cache', which will remove any `.cache` files or `__pycache__` folders.
 brainstation_capstone
 ├── CHANGELOG.md
 ├── DEV_NOTES.md
-├── LICENSE
 ├── README.md
 ├── data
 │   ├── 20230903_model_means_df.parquet
@@ -126,7 +125,13 @@ brainstation_capstone
 │   └── development  [23 entries exceeds filelimit, not opening dir]
 ├── reports
 │   ├── 20230728_synesthete_brainstation_sprint1_vk.pdf
-│   └── 20230821_synesthete_brainstation_sprint2_vk.pdf
+│   ├── 20230821_synesthete_brainstation_sprint2_vk.pdf
+│   ├── 20230905_synesthete_brainstation_sprint3_vk.pdf
+│   └── images
+│       ├── 20230904_readme_splash.png
+│       ├── 20230905_project_flow.drawio
+│       ├── 20230905_project_flow_drawio_dark.png
+│       └── 20230905_project_flow_drawio_light.png
 └── requirements.txt
 ```
 More information on the individual components within the project can be found below:
