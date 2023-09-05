@@ -73,7 +73,7 @@ to download tracks. Looping through the IDs automates this process. Eventually, 
 
 ### Project Flowchart
 
-![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/0c17f599a4d83926313a69da2ce7353decf85032/reports/images/20230905_project_flow_drawio_dark.png)
+![Project Flowchart](https://github.com/Burn1n9m4n/brainstation_capstone/blob/0c17f599a4d83926313a69da2ce7353decf85032/reports/images/20230905_project_flow_drawio_light.png)
 
 The general code flow follows the diagram shown above. Further details are described below:
 1. Ingest Kaggle data
